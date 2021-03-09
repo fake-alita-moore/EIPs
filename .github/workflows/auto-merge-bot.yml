@@ -12,7 +12,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-          check-latest: false
+          check-latest: true
       - run: cd .github/bot && npm ci && npm run build
       - name: auto-merge-bot
         uses: ethereum/EIP-Bot@db360cbd0741a3810a0ed7f496c058c9f3f4fd0f # master
