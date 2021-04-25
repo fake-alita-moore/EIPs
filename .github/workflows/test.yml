@@ -18,6 +18,8 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
+      - name: echo triggering event it
+        run: echo ${{github.event.workflow_run.id}}
       - name: auto-merge-bot
         uses: alita-moore/EIP-Bot@testing-workflow-run
         id: auto-merge-bot
