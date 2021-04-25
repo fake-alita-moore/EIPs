@@ -38,7 +38,6 @@ jobs:
 #         with:
 #           GITHUB-TOKEN: ${{ secrets.TOKEN }}
   auto_merge_bot:
-    if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     name: EIP Auto-Merge Bot
     steps:
