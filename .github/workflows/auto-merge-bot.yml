@@ -50,7 +50,7 @@ jobs:
           node-version: '14'
       - name: auto-merge-bot
         
-        uses: alita-moore/EIP-Bot@01d22bba3c09576972540f339ef847f6d4fa25db
+        uses: alita-moore/EIP-Bot@testing-workflow-run
         id: auto-merge-bot
         with:
           GITHUB-TOKEN: ${{ secrets.TOKEN }} 
