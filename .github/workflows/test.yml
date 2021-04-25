@@ -3,7 +3,7 @@ name: Test
 on:
   workflow_run:
     workflows:
-      - Auto-Merge Bot
+      - Re-run Auto-Merge-Bot
     types:
       - requested
 
@@ -21,7 +21,8 @@ jobs:
       - name: echo triggering event it
         run: echo ${{github.event.workflow_run.id}}
       - name: auto-merge-bot
-        uses: alita-moore/EIP-Bot@testing-workflow-run
-        id: auto-merge-bot
+        uses: alita-moore/EIP-Bot@rerun-pull-request-target-on-review
+        id: rerun-auto-merge-bot
         with:
           GITHUB-TOKEN: ${{ secrets.TOKEN }}
+          WORKFLOW-ID: ${{github.event.workflow_run.id}}
