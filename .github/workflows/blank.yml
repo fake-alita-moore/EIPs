@@ -1,23 +1,13 @@
-name: CI2
+name: automerge
 on:
   workflow_run:
     workflows: ["Auto-Merge Bot"]
     types: [completed]
-  check_suite:
-    types:
-      - completed
-
 jobs:
-  on-success:
+  automerge:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
-      - name: success
-        run: echo "success"
-  on-failure:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
-    steps:
-      - name: failure
-        run: echo "failure"
-      
+      - name: automerge
+        uses: "pascalgn/automerge-action@v0.14.2"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
