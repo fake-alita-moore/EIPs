@@ -1,8 +1,6 @@
 name: Greetings Status
 
-on: 
-  check_run:
-    types: [completed]
+on: check_run
   
 jobs:
   greeting:
