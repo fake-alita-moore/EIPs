@@ -1,6 +1,6 @@
 name: Greetings Status
 
-on: check_run
+on: workflow_run
   
 jobs:
   greeting:
