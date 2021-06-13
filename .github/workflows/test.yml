@@ -1,0 +1,11 @@
+name: testing status
+on:
+  status:
+
+jobs:
+  rerun-bot:
+    runs-on: ubuntu-latest
+    name: Rerun Bot (workflow_run)
+    steps:
+      - name: test
+        exec: echo test
