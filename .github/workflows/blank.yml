@@ -3,6 +3,9 @@ on:
   workflow_run:
     workflows: ["Auto-Merge Bot"]
     types: [completed]
+  check_suite:
+    types:
+      - completed
 
 jobs:
   on-success:
