@@ -8,4 +8,4 @@ jobs:
     name: Rerun Bot (workflow_run)
     steps:
       - name: test
-        exec: echo test
+        run: echo test
