@@ -1,8 +1,9 @@
 name: Greetings Status
 
-on:
-  status
-
+on: 
+  check_run:
+    types: [completed]
+  
 jobs:
   greeting:
     runs-on: ubuntu-latest
