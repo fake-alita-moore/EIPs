@@ -1,5 +1,5 @@
 name: Status Change
-on: status
+on: [status, check_run, check_suite]
 jobs:
   event:
     runs-on: ubuntu-latest
