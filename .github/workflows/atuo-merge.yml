@@ -9,6 +9,10 @@ jobs:
     - uses: alexwilson/enable-github-automerge-action@main
       with:
         github-token: ${{ secrets.TOKEN }}
+  enable-auto-merge-2:
+    runs-on: ubuntu-latest
+    
+    steps:
     - uses: peter-evans/enable-pull-request-automerge@v1
       with:
         token: ${{ secrets.TOKEN }}
