@@ -1,7 +1,5 @@
 name: Auto-Merge
-on:
-  pull_request_target:
-    types: [labeled]
+on: [pull_request_target]
 
 jobs:
   enable-auto-merge:
@@ -10,4 +8,4 @@ jobs:
     steps:
     - uses: alexwilson/enable-github-automerge-action@main
       with:
-        github-token: "${{ secrets.TOKEN }}"
+        github-token: ${{ secrets.TOKEN }}
