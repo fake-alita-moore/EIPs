@@ -9,3 +9,7 @@ jobs:
     - uses: alexwilson/enable-github-automerge-action@main
       with:
         github-token: ${{ secrets.TOKEN }}
+    - uses: peter-evans/enable-pull-request-automerge@v1
+      with:
+        token: ${{ secrets.TOKEN }}
+        pull-request-number: 13
