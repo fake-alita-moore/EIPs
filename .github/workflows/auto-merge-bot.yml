@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.draft == false
     steps:
+    - run: echo ${{github.event.pull_request}}
     - uses: alexwilson/enable-github-automerge-action@main
       with:
         github-token: ${{ secrets.TOKEN }}
