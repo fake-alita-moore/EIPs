@@ -1,12 +1,11 @@
-name: automerge
+name: toggle automerge
 on: 
   pull_request_target:
-  label:
+    types: [auto_merge_disabled, opened]
 jobs:
-  automerge:
+  enable-auto-merge:
     runs-on: ubuntu-latest
     steps:
-      - name: automerge
-        uses: "pascalgn/automerge-action@v0.14.3"
-        env:
-          GITHUB_TOKEN: "${{ secrets.TOKEN }}"
+    - uses: alexwilson/enable-github-automerge-action@main
+      with:
+        github-token: ${{ secrets.TOKEN }}
