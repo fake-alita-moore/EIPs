@@ -23,3 +23,5 @@ jobs:
         with:
           GITHUB-TOKEN: ${{ secrets.TOKEN }}
           WORKFLOW-ID: ${{github.event.workflow_run.id}}
+          ID-TO-RERUN: "6519819"
+          EVENT-TYPE: "pull_request_target"
