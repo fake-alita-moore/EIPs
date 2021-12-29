@@ -29,6 +29,7 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         days-before-stale: 180
         days-before-close: 14
+        
         exempt-issue-labels: 'discussions-to'
         stale-issue-label: 'stale'
         stale-issue-message: 'There has been no activity on this issue for two months. It will be closed in a week if no further activity occurs. If you would like to move this EIP forward, please respond to any outstanding feedback or add a comment indicating that you have addressed all required feedback and are ready for a review.'
