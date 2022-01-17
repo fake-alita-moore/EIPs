@@ -29,14 +29,15 @@ jobs:
     runs-on: ubuntu-latest
 #     needs: ["auto_merge_bot"]
     steps:
-    - name: Enable Automerge
+    - name: EnableAutomerge
       run: gh pr merge --auto --merge "$PR_URL"
       continue-on-error: true
       env:
         PR_URL: ${{github.event.pull_request.html_url}}
         GITHUB_TOKEN: ${{secrets.TOKEN}}
     - name: Enable Automerge V2
-      continue-on-error: true
+      needs: [EnableAutomerge]
+      if: needs.EnableAutomerge == 'failure'
       uses: "pascalgn/automerge-action@v0.14.3"
       env:
           GITHUB_TOKEN: "${{ secrets.TOKEN }}"
