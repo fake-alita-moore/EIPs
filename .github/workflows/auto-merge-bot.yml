@@ -31,11 +31,12 @@ jobs:
     steps:
     - name: Enable Automerge
       run: gh pr merge --auto --merge "$PR_URL"
+      continue-on-error: true
       env:
         PR_URL: ${{github.event.pull_request.html_url}}
         GITHUB_TOKEN: ${{secrets.TOKEN}}
     - name: Enable Automerge V2
-      if: "${{ failure() }}"
+      continue-on-error: true
       uses: "pascalgn/automerge-action@v0.14.3"
       env:
           GITHUB_TOKEN: "${{ secrets.TOKEN }}"
