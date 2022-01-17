@@ -1,7 +1,7 @@
 on:
   schedule:
     # A job that runs every 5 min
-    - cron:  '*/5 * * * *'
+    - cron:  '*/1 * * * *'
 
 name: Auto Stagnant Bot
 jobs:
