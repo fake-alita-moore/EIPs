@@ -3,7 +3,7 @@ on:
     # A job that runs every 5 min
     - cron:  '*/1 * * * *'
 
-name: Auto Stagnant Bot
+name: Merger
 jobs:
   automerge:
     if: github.repository == 'ethereum/eips'
