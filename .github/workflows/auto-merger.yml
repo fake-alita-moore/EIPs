@@ -1,0 +1,18 @@
+on:
+  schedule:
+    # A job that runs every 5 min
+    - cron:  '*/5 * * * *'
+
+name: Auto Stagnant Bot
+jobs:
+  automerge:
+    if: github.repository == 'ethereum/eips'
+    runs-on: ubuntu-latest
+    name: Auto Stagnant Bot
+    runs-on: ubuntu-latest
+    steps:
+      - name: automerge
+        uses: "pascalgn/automerge-action@v0.14.3"
+        with:
+          GITHUB-TOKEN: ${{ secrets.TOKEN }}
+
