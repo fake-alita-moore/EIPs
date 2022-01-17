@@ -8,7 +8,7 @@ jobs:
   automerge:
     if: github.repository == 'ethereum/eips'
     runs-on: ubuntu-latest
-    name: Auto Stagnant Bot
+    name: Auto Merger
     steps:
       - name: automerge
         uses: "pascalgn/automerge-action@v0.14.3"
