@@ -9,7 +9,6 @@ jobs:
     if: github.repository == 'ethereum/eips'
     runs-on: ubuntu-latest
     name: Auto Stagnant Bot
-    runs-on: ubuntu-latest
     steps:
       - name: automerge
         uses: "pascalgn/automerge-action@v0.14.3"
