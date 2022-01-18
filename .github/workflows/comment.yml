@@ -1,6 +1,6 @@
 on:
   issues:
-    - opened
+    types: [opened]
 
 jobs:
   create_comment:
