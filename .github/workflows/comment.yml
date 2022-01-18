@@ -1,0 +1,12 @@
+on:
+  issues:
+    - created
+
+jobs:
+  create_comment:
+    - name: Create comment
+      uses: peter-evans/create-or-update-comment@v1
+      with:
+        issue-number: ${{ github.event.issue.number }}
+        body: |
+          testing
