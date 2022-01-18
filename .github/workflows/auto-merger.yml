@@ -6,7 +6,6 @@ on:
 name: Merger
 jobs:
   automerge:
-    if: github.repository == 'ethereum/eips'
     runs-on: ubuntu-latest
     name: Auto Merger
     steps:
