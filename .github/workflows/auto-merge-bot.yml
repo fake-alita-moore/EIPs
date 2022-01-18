@@ -38,7 +38,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: Add Label
-        uses: "alita-moore/add-pr-label@1.0.1"
+        uses: "alita-moore/add-pr-label@main"
         env:
             githubToken: "${{ secrets.GITHUB_TOKEN }}"
             labelToAdd: "automerge"
