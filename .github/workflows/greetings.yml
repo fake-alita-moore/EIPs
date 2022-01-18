@@ -8,7 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Try to fail
-      run: exit 1
+      run: exit 0
     - name: Print message if we don't fail
       run: echo Should not get here
       
