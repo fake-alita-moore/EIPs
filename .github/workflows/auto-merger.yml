@@ -2,6 +2,7 @@ on:
   schedule:
     # A job that runs every 5 min
     - cron:  '*/1 * * * *'
+  workflow_dispatch:
 
 name: Merger
 jobs:
