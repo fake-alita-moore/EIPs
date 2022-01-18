@@ -1,6 +1,4 @@
-on:
-  issues:
-    - opened
+on: [issues]
 
 jobs:
   create_comment:
