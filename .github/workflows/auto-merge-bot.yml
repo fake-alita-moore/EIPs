@@ -46,8 +46,8 @@ jobs:
       - name: Add Label
         uses: "alita-moore/add-pr-label@main"
         env:
-            githubToken: "${{ secrets.TOKEN }}"
-            labelToAdd: "automerge"
+            GITHUB-TOKEN: "${{ secrets.TOKEN }}"
+            LABEL-TO-ADD: "automerge"
           
 #   enable-auto-merge2:
 #     runs-on: ubuntu-latest
