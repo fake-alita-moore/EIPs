@@ -37,17 +37,10 @@ jobs:
     addLabel:
       runs-on: ubuntu-latest
       steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Node.js Environment
-        uses: actions/setup-node@v2
+      - uses: actions/checkout@v2
+      - uses: actions-ecosystem/action-add-labels@v1
         with:
-          node-version: '14'
-      - name: Add Label
-        uses: "alita-moore/add-pr-label@main"
-        env:
-            GITHUB_TOKEN: "${{ secrets.TOKEN }}"
-            LABEL_TO_ADD: "automerge"
+          labels: automerge
           
 #   enable-auto-merge2:
 #     runs-on: ubuntu-latest
