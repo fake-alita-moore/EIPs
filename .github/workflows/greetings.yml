@@ -4,7 +4,6 @@ on: [pull_request_target]
 
 jobs:
   greeting:
-    if: github.repository == 'ethereum/eips'
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
